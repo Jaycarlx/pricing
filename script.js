@@ -74,11 +74,14 @@ livPlus.addEventListener("click", () => {
 })
 
 // toilets
-toiMinus.addEventListener("click", () => {
-       decrease(inputtoi)
+bedMinus.addEventListener("click", () => {
+    if (inputtoi.textContent > 1) {
+        let resu = parseInt(inputtoi.textContent) - 1;
+        inputtoi.textContent = resu;
+    }
     })
         
-    toiPlus.addEventListener("click", () => {
+    bedPlus.addEventListener("click", () => {
         increase(inputtoi)
     })
 
@@ -132,13 +135,12 @@ freqBtns.forEach((btn) => {
         selectedFreq = btn.id;
         error.style.display = "none";
         calculatePrice()
-        console.log(selectedFreq)
     })
 })
 
 const calculatePrice = () => {
     if ((selectedFreq === "onceAMonth" || selectedFreq === "oneOff") && inputBed.textContent == 1) {
-        bedPrice = 3500;
+        bedPrice = 1400;
         livPrice = inputLiv.textContent * roomPrice,
     toiPrice = inputtoi.textContent * roomPrice,
     kitPrice = inputKit.textContent * roomPrice,
@@ -149,9 +151,9 @@ const calculatePrice = () => {
       prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
 
     } else if ((selectedFreq === "onceAMonth" || selectedFreq === "oneOff") && inputBed.textContent == 2) {
-        bedPrice = 4000;
+        bedPrice = 1900;
         livPrice = inputLiv.textContent * roomPrice,
-        toiPrice = inputtoi.textContent * roomPrice,
+        toiPrice = roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
         stuPrice = inputStu.textContent * roomPrice,
         outPrice = inputOut.textContent * roomPrice;
@@ -160,9 +162,9 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
 
     } else if ((selectedFreq === "onceAMonth" || selectedFreq === "oneOff") && inputBed.textContent == 3) {
-        bedPrice = 7000;
+        bedPrice = 4900;
         livPrice = inputLiv.textContent * roomPrice,
-        toiPrice = inputtoi.textContent * roomPrice,
+        toiPrice = roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
         stuPrice = inputStu.textContent * roomPrice,
         outPrice = inputOut.textContent * roomPrice;
@@ -171,9 +173,9 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
 
     } else if ((selectedFreq === "onceAMonth" || selectedFreq === "oneOff") && inputBed.textContent == 4) {
-        bedPrice = 9000;
+        bedPrice = 6900;
         livPrice = inputLiv.textContent * roomPrice,
-        toiPrice = inputtoi.textContent * roomPrice,
+        toiPrice =  roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
         stuPrice = inputStu.textContent * roomPrice,
         outPrice = inputOut.textContent * roomPrice;
@@ -182,9 +184,9 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
 
     } else if ((selectedFreq === "onceAMonth" || selectedFreq === "oneOff") && inputBed.textContent == 5) {
-        bedPrice = 10000;
+        bedPrice = 7900;
         livPrice = inputLiv.textContent * roomPrice,
-        toiPrice = inputtoi.textContent * roomPrice,
+        toiPrice = roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
         stuPrice = inputStu.textContent * roomPrice,
         outPrice = inputOut.textContent * roomPrice;
@@ -193,9 +195,9 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
     
     } else if ((selectedFreq === "onceAMonth" || selectedFreq === "oneOff") && inputBed.textContent == 6) {
-        bedPrice = 11000;
+        bedPrice = 8900;
         livPrice = inputLiv.textContent * roomPrice,
-        toiPrice = inputtoi.textContent * roomPrice,
+        toiPrice =  roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
         stuPrice = inputStu.textContent * roomPrice,
         outPrice = inputOut.textContent * roomPrice;
@@ -204,9 +206,9 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
     
     } else if (selectedFreq === "onceAWeek" && inputBed.textContent == 1) {
-        bedPrice = 12000;
+        bedPrice = 9900;
         livPrice = inputLiv.textContent * roomPrice,
-        toiPrice = inputtoi.textContent * roomPrice,
+        toiPrice = roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
         stuPrice = inputStu.textContent * roomPrice,
         outPrice = inputOut.textContent * roomPrice;
@@ -215,9 +217,9 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
 
     } else if (selectedFreq === "onceAWeek" && inputBed.textContent == 2) {
-        bedPrice = 14000;
+        bedPrice = 11900;
         livPrice = inputLiv.textContent * roomPrice,
-        toiPrice = inputtoi.textContent * roomPrice,
+        toiPrice =  roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
         stuPrice = inputStu.textContent * roomPrice,
         outPrice = inputOut.textContent * roomPrice;
@@ -226,9 +228,9 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
 
     } else if (selectedFreq === "onceAWeek" && inputBed.textContent == 3) {
-        bedPrice = 24000;
+        bedPrice = 21900;
         livPrice = inputLiv.textContent * roomPrice,
-        toiPrice = inputtoi.textContent * roomPrice,
+        toiPrice = roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
         stuPrice = inputStu.textContent * roomPrice,
         outPrice = inputOut.textContent * roomPrice;
@@ -237,9 +239,9 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
 
     } else if (selectedFreq === "onceAWeek" && inputBed.textContent == 4) {
-        bedPrice = 32000;
+        bedPrice = 29900;
         livPrice = inputLiv.textContent * roomPrice,
-        toiPrice = inputtoi.textContent * roomPrice,
+        toiPrice =  roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
         stuPrice = inputStu.textContent * roomPrice,
         outPrice = inputOut.textContent * roomPrice;
@@ -248,9 +250,9 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
 
     } else if (selectedFreq === "onceAWeek" && inputBed.textContent == 5) {
-        bedPrice = 35000;
+        bedPrice = 32900;
         livPrice = inputLiv.textContent * roomPrice,
-        toiPrice = inputtoi.textContent * roomPrice,
+        toiPrice = roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
         stuPrice = inputStu.textContent * roomPrice,
         outPrice = inputOut.textContent * roomPrice;
@@ -259,9 +261,9 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
 
     } else if (selectedFreq === "onceAWeek" && inputBed.textContent == 6) {
-        bedPrice = 38000;
+        bedPrice = 35900;
         livPrice = inputLiv.textContent * roomPrice,
-        toiPrice = inputtoi.textContent * roomPrice,
+        toiPrice = roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
         stuPrice = inputStu.textContent * roomPrice,
         outPrice = inputOut.textContent * roomPrice;
@@ -270,9 +272,9 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
 
     } else if (selectedFreq === "twiceAMonth" && inputBed.textContent == 1) {
-        bedPrice = 6700;
+        bedPrice = 4600;
         livPrice = inputLiv.textContent * roomPrice,
-        toiPrice = inputtoi.textContent * roomPrice,
+        toiPrice = roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
         stuPrice = inputStu.textContent * roomPrice,
         outPrice = inputOut.textContent * roomPrice;
@@ -281,9 +283,9 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
 
     } else if (selectedFreq === "twiceAMonth" && inputBed.textContent == 2) {
-        bedPrice = 7700;
+        bedPrice = 5600;
         livPrice = inputLiv.textContent * roomPrice,
-        toiPrice = inputtoi.textContent * roomPrice,
+        toiPrice = roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
         stuPrice = inputStu.textContent * roomPrice,
         outPrice = inputOut.textContent * roomPrice;
@@ -292,9 +294,9 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
 
     } else if (selectedFreq === "twiceAMonth" && inputBed.textContent == 3) {
-        bedPrice = 13600;
+        bedPrice = 11500;
         livPrice = inputLiv.textContent * roomPrice,
-        toiPrice = inputtoi.textContent * roomPrice,
+        toiPrice =  roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
         stuPrice = inputStu.textContent * roomPrice,
         outPrice = inputOut.textContent * roomPrice;
@@ -303,9 +305,9 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
 
     } else if (selectedFreq === "twiceAMonth" && inputBed.textContent == 4) {
-        bedPrice = 17500;
+        bedPrice = 15400;
         livPrice = inputLiv.textContent * roomPrice,
-        toiPrice = inputtoi.textContent * roomPrice,
+        toiPrice =  roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
         stuPrice = inputStu.textContent * roomPrice,
         outPrice = inputOut.textContent * roomPrice;
@@ -314,7 +316,7 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
 
     } else if (selectedFreq === "twiceAMonth" && inputBed.textContent == 5) {
-        bedPrice = 18600;
+        bedPrice = 16500;
         livPrice = inputLiv.textContent * roomPrice,
         toiPrice = inputtoi.textContent * roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
@@ -325,7 +327,7 @@ const calculatePrice = () => {
         prompT.textContent = `${inputBed.textContent} bedroom, ${inputLiv.textContent} living room, ${inputtoi.textContent} toilet, ${inputKit.textContent} kitchen, ${inputStu.textContent} Study/store and ${inputOut.textContent} Outdoor/Balcony`
 
     } else if (selectedFreq === "twiceAMonth" && inputBed.textContent == 6) {
-        bedPrice = 20000;
+        bedPrice = 17900;
         livPrice = inputLiv.textContent * roomPrice,
         toiPrice = inputtoi.textContent * roomPrice,
         kitPrice = inputKit.textContent * roomPrice,
@@ -350,3 +352,7 @@ calculateBtn.addEventListener("click", () => {
     }
 })
 calculateBtn.addEventListener("click", calculatePrice)
+
+
+
+

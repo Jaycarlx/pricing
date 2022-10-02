@@ -88,7 +88,7 @@ border-radius: .3rem;
 background-color: rgb(37, 160, 113);
 color: #fff;
 font-weight: 700;
-font-size: 0.7rem;
+font-size: 1rem;
 margin-left: 8rem;
 cursor: pointer;
 }
@@ -118,9 +118,9 @@ margin-top: 1rem; }
     font-size: 1rem;
 }
 
-.active, .freq button:hover{
-    color:rgb(37, 160, 113);
-    background-color: rgba(55, 201, 145, 0.13);
+.active , .freq button:hover{
+    color:rgb(37, 160, 113) !important;
+    background-color: rgba(55, 201, 145, 0.13) !important;
 }
 
 .error{
