@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    border: 1px solid #e1e1e1;
+    border-radius: 1rem;
+    padding: 2rem 1rem 1rem ;
+    background-color: rgba(245, 250, 248, 0.248);
+}
+
+.container h2{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: rgb(37, 160, 113)
+}
+
+body > div > div > p:nth-child(1){
+ font-weight: 700;
+ font-size: .8rem;
+}
+
+div.room{
+    margin-top: .5rem;
+}
+
+p.statement{
+    border: 1px solid #e1e1e1;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color:#757373;
+    padding: .4rem .2rem;
+    border-radius: .3rem;
+}
+
+div.dropdown{
+   margin-top: .5rem;
+    border-radius: .3rem;
+    padding: .7rem;
+    display: flex;
+    box-shadow: 0px 0px 1px #757373;
+    flex-direction: column;
+    gap: 1rem;
+    display: none;
+}
+
+div.dropdown.show{
+    display: block;
+}
+
+.plus , .minus{
+    cursor: pointer;
+}
+
+div.service{
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+    margin-bottom: .5rem;
+}
+div.signs{
+    display: flex;
+    justify-content: space-around;
+    gap: .5rem;
+}
+
+div.signs .input{
+    border: 1px solid #e1e1e1;
+    padding: .1rem .4rem;
+    border-radius: .2rem;
+}
+
+.done{
+border: none;
+outline: none;
+padding: .3rem 1rem;
+border-radius: .3rem;
+background-color: rgb(37, 160, 113);
+color: #fff;
+font-weight: 700;
+font-size: 0.7rem;
+margin-left: 8rem;
+cursor: pointer;
+}
+
+body > div > div > p:nth-child(3){
+font-weight: 700;
+ font-size: .8rem;
+margin-top: 1rem; }
+
+.freq{
+    margin-top: .7rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+.freq button{
+    border: none;
+    outline: none;
+    padding: .5rem .5rem;
+    border-radius: .5rem;
+    border: 1px solid rgb(37, 160, 113);
+    background-color: transparent;
+    color: #000;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.active, .freq button:hover{
+    color:rgb(37, 160, 113);
+    background-color: rgba(55, 201, 145, 0.13);
+}
+
+.error{
+    color: rgb(206, 62, 62);
+    background-color: rgb(253, 213, 213);
+    padding: .3rem;
+    font-size: .7rem;
+    text-align: center;
+    display: none;
+    width: 70%;
+    border-radius: .2rem;
+    margin: 0 auto;
+    margin-top: .2rem;
+}

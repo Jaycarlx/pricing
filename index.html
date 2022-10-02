@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <title>Pricing</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Standard Cleaning</h2>
+        <div class="pricecontainer">
+            <p>Number of rooms to be cleaned?</p>
+            <div class="room">
+                <p class="statement"> 1 bedroom etc</p>
+                <div class="dropdown">
+                    <div class="service">
+                        <p>Bedroom</p>
+                        <div class="signs">
+                            <p class="b-minus minus">&#8722;</p>
+                            <p class="input" id="b-input">1</p>
+                            <p class="b-plus plus">&#43;</p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <p>Living/Dining Room</p>
+                        <div class="signs">
+                            <p class="l-minus minus">&#8722;</p>
+                            <p class="input" id="l-input">1</p>
+                            <p class="l-plus plus">&#43;</p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <p>Toilets/ Bathrooms</p>
+                        <div class="signs">
+                            <p class="t-minus minus">&#8722;</p>
+                            <p class="input" id="t-input">1</p>
+                            <p class="t-plus plus">&#43;</p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <p>Kitchen</p>
+                        <div class="signs">
+                            <p class="k-minus minus">&#8722;</p>
+                            <p class="input" id="k-input">1</p>
+                            <p class="k-plus plus">&#43;</p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <p>Study/store</p>
+                        <div class="signs">
+                            <p class="s-minus minus" >&#8722;</p>
+                            <p class="input" id="s-input">1</p>
+                            <p class="s-plus plus">&#43;</p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <p>Outdoor/ Balcony</p>
+                        <div class="signs">
+                            <p class="o-minus minus">&#8722;</p>
+                            <p class="input" id="o-input">1</p>
+                            <p class="o-plus plus">&#43;</p>
+                        </div>
+                    </div>
+                    <button class="done">Done</button>
+                </div>
+            </div>
+
+            <p>Frequency</p>
+            <div class="freq">
+                <button id="oneOff">One off</button>
+                <button id="onceAWeek">Once a week</button>
+                <button id="onceAMonth">Once a month</button>
+                <button id="twiceAMonth">Twice a month</button>
+            </div>
+
+            <button id="calculate" class="done">Calculate</button>
+            <p class="error">Please seleect a Frequency</p>
+
+            <div class="total">
+                <h4>Price</h4>
+                <h4>&#8358; <span class="total-price">***</span></h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
